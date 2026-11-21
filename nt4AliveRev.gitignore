@@ -1,0 +1,31 @@
+# Compiled / Binary Tools (downloaded or copied locally at runtime)
+*.exe
+*.dll
+*.bin
+*.BIN
+
+# ISO Images
+*.iso
+*.ISO
+
+# Working & Staging Directories
+SOURCE/
+SOURCE_NEW/
+WORK/
+TEMP/
+W2K_TEMP/
+W2K_MIN_WORK/
+DRV_WORK/
+DRV_DL_TEMP/
+
+# User-Supplied Packages, Drivers & Custom Overrides
+PACKAGES/
+PACKAGES_TS/
+DRIVERS/
+DUMP/
+TOOLS/
+
+# Debug Logs & Temporary Files
+DEBUG.TXT
+*.log
+*.tmp
