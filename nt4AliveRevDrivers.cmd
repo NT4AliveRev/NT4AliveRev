@@ -389,4 +389,3 @@ IF EXIST "%DRV_DIR%\%CFG_EXE%" (
     ) >> "%STAGE_DIR%\I386\DOSNET.INF"
 )
 EXIT /B 0
-
