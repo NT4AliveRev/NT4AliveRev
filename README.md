@@ -32,9 +32,9 @@ Place the `.cmd` scripts in a clean working folder alongside:
 * Your **Windows NT 4.0 ISO** (Workstation, Server, or Terminal Server)
 * **Service Pack 6a:** `sp6ai386.exe` (for Workstation/Server) or `wtsi386.exe` (for Terminal Server)
 * *(Optional)* Any post-SP6a hotfixes (`*299444*.exe`, `*q*i.exe`, `WindowsNT4*.exe`, `InstMsiW.exe`) inside `PACKAGES\` (or `PACKAGES_TS\` for Terminal Server)
-* *(Optional)* A **Windows 2000 ISO** if you want to integrate Windows 2000's `BOOT.BIN`, `NTLDR`, and `NTDETECT.COM` for improved ACPI/hardware boot compatibility
+* *(Optional)* A **Windows 2000 ISO** if you want to integrate Windows 2000's 'BOOTFIX.BIN',`BOOT.BIN`, `NTLDR`, and `NTDETECT.COM` for improved ACPI/hardware boot compatibility
 
-### 2. *(Optional)* Slim Down Your Windows 2000 ISO
+### 2. *(Optional)* Slim Down Your Windows 2000 ISO to just the above needed files
 Run **`nt4AliveRevClean2K.cmd`** to generate `nt4AliveRevClean2K.iso` (~300 KB). Your original Windows 2000 ISO is left untouched and can be archived elsewhere.
 
 ### 3. Build the Base SP6a Slipstreamed ISO
@@ -44,7 +44,7 @@ Right-click **`nt4AliveRev.cmd`** and select **Run as administrator**.
 
 ### 4. *(Optional)* Integrate Modern Storage & USB Drivers
 Right-click **`nt4AliveRevDrivers.cmd`** and select **Run as administrator**.
-* Choose **`Y`** when prompted to automatically fetch the `ages2001` driver suite (`AHCINT` SATA AHCI, `NVMENT` NVMe, `IDENT` IDE, `MMCSDNT` SD/SDHC/SDXC, and `USBNT` USB 1.1–4/Thunderbolt) from GitHub.
+* Choose **`Y`** when prompted to automatically fetch the `ages2001` driver suite (`AHCINT` SATA AHCI, `NVMENT` NVMe, `IDENT` IDE, `MMCSDNT` SD/SDHC/SDXC, and `USBNT` USB 1.1â€“4/Thunderbolt) from GitHub.
 * Drop any additional custom driver files into `DRIVERS\CUSTOM\` if desired.
 * The script will generate **`NT4SP6W+.iso`** (or `S+` / `T+`).
 
@@ -75,14 +75,15 @@ CDIMAGE_SWITCHES=-h -j1 -m -o -e
 
 ### Command-Line `RUNMODE` Options
 You can also pass a `RUNMODE` environment variable before launching `nt4AliveRev.cmd` from an elevated Command Prompt:
-* **`SET RUNMODE=SKIPINTRO`** — Skips the intro banner and starts immediately.
-* **`SET RUNMODE=FULLAUTO`** — Runs unattended (skips the intro banner and final "Press any key to quit" pause; pair with `USE_W2K_BOOT=YES` or `NO` in `SETTINGS.INI` for zero prompts).
-* **`SET RUNMODE=D`** — Runs in debug mode and logs full verbose output to `DEBUG.TXT` (same as typing `D` at the intro prompt).
+* **`SET RUNMODE=SKIPINTRO`** â€” Skips the intro banner and starts immediately.
+* **`SET RUNMODE=FULLAUTO`** â€” Runs unattended (skips the intro banner and final "Press any key to quit" pause; pair with `USE_W2K_BOOT=YES` or `NO` in `SETTINGS.INI` for zero prompts).
+* **`SET RUNMODE=D`** â€” Runs in debug mode and logs full verbose output to `DEBUG.TXT` (same as typing `D` at the intro prompt).
 
 ---
 
 ## Credits & License
 
-* **Original `NT4Alive` (2008):** Tomcat76, FDV, and TommyP — licensed under **GNU GPLv2**.
+* **Original `NT4Alive` (2008):** Tomcat76, FDV, and TommyP â€” licensed under **GNU GPLv2**.
 * **NT 4.0 Storage & USB Drivers:** [Atakan Gesmeli (`ages2001`)](https://github.com).
-* **License:** This project is licensed under the **GNU General Public License v2.0** — see the [LICENSE](LICENSE) file for details.
+* **License:** This project is licensed under the **GNU General Public License v2.0** â€” see the [LICENSE](LICENSE) file for details.
+
